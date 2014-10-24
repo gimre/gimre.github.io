@@ -7,6 +7,6 @@ layout: nil
 			{
 				"title": "{{ post.title }}",
 			}
-		{% endofr %}
+		{% endfor %}
 	]
 }
