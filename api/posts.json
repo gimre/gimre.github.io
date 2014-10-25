@@ -8,6 +8,7 @@ layout: nil
 			"date": "{{ p.date }}",
 			"excerpt": "{{ p.excerpt | strip_newlines }}",
 			"title": "{{ p.title }}"
-		},
+		}
+		{% unless forloop.last },{% endunless %}
 	{% endfor %}
 ]
