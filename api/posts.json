@@ -9,6 +9,6 @@ layout: nil
 			"excerpt": "{{ p.excerpt | strip_newlines }}",
 			"title": "{{ p.title }}"
 		}
-		{% unless forloop.last },{% endunless %}
+		{% unless forloop.last %},{% endunless %}
 	{% endfor %}
 ]
