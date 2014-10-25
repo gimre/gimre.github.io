@@ -1,12 +1,11 @@
 ---
 layout: nil
 ---
-{
-	"posts": [
-		{% for p in site.posts %}
-			{
-				"title": "{{ p.title }}",
-			}
-		{% endfor %}
-	]
-}
+[
+	{% for p in site.posts %}
+		{
+			"title": "{{ p.title }}",
+			"date": "{{ p.date }}"
+		},
+	{% endfor %}
+]
