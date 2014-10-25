@@ -4,9 +4,9 @@ layout: nil
 [
 	{% for p in site.posts %}
 		{
-			"content": "{{ p.content }}",
+			"content": "{{ p.content | strip_newlines }}",
 			"date": "{{ p.date }}",
-			"excerpt": "{{ p.excerpt }}",
+			"excerpt": "{{ p.excerpt | strip_newlines }}",
 			"title": "{{ p.title }}"
 		},
 	{% endfor %}
