@@ -1,7 +1,24 @@
 ( function ( ) {
 	'use strict';
 
-	var app = angular.module( 'blog', [ ] );
+	var app = angular.module( 'blog', [ 'ui.router' ] );
+
+	app.config( [
+		'$stateProvider',
+		'$urlRouterProvider',
+
+		function ( $stateProvider, $urlRouterProvider ) {
+			
+			$urlRouterProvider.otherwise( '/404' );
+
+			$stateProvider
+				.state('404', {
+					url: '/404',
+					templateUrl: 'views/404.html'
+				} );
+		}
+
+	] );
 
 	app.run( [
 		'$rootScope',
