@@ -6,7 +6,7 @@ layout: nil
 		{
 			"content": "{{ p.content | strip_newlines }}",
 			"date": "{{ p.date }}",
-			"excerpt": "{{ p.excerpt | strip_newlines }}",
+			"excerpt": "{{ p.content | split:"<!-- more -->" | first | strip_newlines }}",
 			"title": "{{ p.title }}"
 		}
 		{% unless forloop.last %},{% endunless %}
